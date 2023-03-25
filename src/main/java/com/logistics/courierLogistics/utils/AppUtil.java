@@ -47,13 +47,8 @@ public enum AppUtil {
 
     public static String generateKeys(String keyName) {
         String keySampleSpace = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        String generatedKeys = "";
-        try {
-            generatedKeys = keyName + ID.generateRandomCharacters(32, keySampleSpace);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return generatedKeys;
+        return keyName + ID.generateRandomCharacters(32, keySampleSpace);
+
     }
 
     public static boolean validateEmail(String contactEmail) {
